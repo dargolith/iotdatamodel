@@ -5,6 +5,9 @@ export const Channel = joi
   .meta({ name: 'Channel', super: 'V' })
   .unknown()
   .keys({
-    rid: joi.string().required(),
+    rid: joi
+      .string()
+      .required()
+      .meta({ unique: true }),
     name: joi.string().required(),
   });

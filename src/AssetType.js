@@ -5,7 +5,10 @@ export const AssetType = joi
   .meta({ name: 'AssetType', super: 'V' })
   .unknown()
   .keys({
-    rid: joi.string().required(),
+    rid: joi
+      .string()
+      .required()
+      .meta({ unique: true }),
     id: joi
       .string()
       .required()

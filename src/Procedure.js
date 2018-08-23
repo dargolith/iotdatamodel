@@ -1,8 +1,8 @@
 import joi from 'joi';
 
-export const Identity = joi
+export const Procedure = joi
   .object()
-  .meta({ name: 'Identity', super: 'V' })
+  .meta({ name: 'Procedure', super: 'V' })
   .unknown()
   .keys({
     rid: joi

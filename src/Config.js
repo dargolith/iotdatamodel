@@ -1,13 +1,16 @@
 import joi from 'joi';
 
-export const Asset = joi
+export const Config = joi
   .object()
-  .meta({ name: 'Asset', super: 'V' })
+  .meta({ name: 'Config', super: 'V' })
   .unknown()
   .keys({
     rid: joi
       .string()
       .required()
       .meta({ unique: true }),
-    name: joi.string().required(),
+    id: joi
+      .string()
+      .required()
+      .meta({ unique: true }),
   });

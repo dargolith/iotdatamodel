@@ -1,8 +1,8 @@
 import joi from 'joi';
 
-export const Identity = joi
+export const ChannelType = joi
   .object()
-  .meta({ name: 'Identity', super: 'V' })
+  .meta({ name: 'ChannelType', super: 'V' })
   .unknown()
   .keys({
     rid: joi
@@ -13,4 +13,6 @@ export const Identity = joi
       .string()
       .required()
       .meta({ unique: true }),
+    type: joi.string(),
+    format: joi.string(),
   });
