@@ -1,35 +1,36 @@
-import pt from 'prop-types';
+import pt from "prop-types";
 
 export const transformable = pt.array;
-export const transformableOr = typeSpec => pt.oneOfType([typeSpec, transformable]);
+export const transformableOr = typeSpec =>
+  pt.oneOfType([typeSpec, transformable]);
 
 // ----- GENERIC DATA MODEL ----------------------------------------
 
 export const assetMinimum = {
   rid: pt.string.isRequired,
   id: pt.string.isRequired,
-  name: pt.string.isRequired,
+  name: pt.string.isRequired
 };
 export const assetMinimumShape = pt.shape(assetMinimum);
 
 export const assetTypeMinimum = {
   rid: pt.string.isRequired,
-  id: pt.string.isRequired,
+  id: pt.string.isRequired
 };
 export const assetTypeMinimumShape = pt.shape(assetTypeMinimum);
 
 export const thingMinimum = {
-  rid: pt.string.isRequired,
+  rid: pt.string.isRequired
 };
 export const thingMinimumShape = pt.shape(thingMinimum);
 
 export const thingTypeMinimum = {
-  rid: pt.string.isRequired,
+  rid: pt.string.isRequired
 };
 export const thingTypeMinimumShape = pt.shape(thingTypeMinimum);
 
 export const configMinimum = {
-  rid: pt.string.isRequired,
+  rid: pt.string.isRequired
 };
 export const configMinimumShape = pt.shape(configMinimum);
 
@@ -39,7 +40,7 @@ export const roleMinimum = {
   name: pt.string,
   sub: pt.object,
   pub: pt.object,
-  rpc: pt.object,
+  rpc: pt.object
 };
 export const roleMinimumShape = pt.shape(roleMinimum);
 
@@ -57,32 +58,32 @@ export const ruleMinimum = {
   resetActions: pt.object,
   cooldown: pt.number,
   ttl: pt.number,
-  actuator: pt.string,
+  actuator: pt.string
 };
 export const ruleMinimumShape = pt.shape(ruleMinimum);
 
 export const userMinimum = {
   rid: pt.string.isRequired,
   id: pt.string.isRequired,
-  name: pt.string.isRequired,
+  name: pt.string.isRequired
 };
 export const userMinimumShape = pt.shape(userMinimum);
 
 export const channelMinimum = {
   rid: pt.string.isRequired,
   id: pt.string.isRequired,
-  historyConf: pt.object, // TODO: specify
+  historyConf: pt.object // TODO: specify
 };
 export const channelMinimumShape = pt.shape(channelMinimum);
 
 export const channelTypeMinimum = {
-  rid: pt.string.isRequired,
+  rid: pt.string.isRequired
 };
 export const channelTypeMinimumShape = pt.shape(channelTypeMinimum);
 
 export const rpcMinimum = {
   rid: pt.string.isRequired,
-  id: pt.string.isRequired,
+  id: pt.string.isRequired
 };
 export const rpcMinimumShape = pt.shape(rpcMinimum);
 
@@ -91,7 +92,7 @@ export const rpcMinimumShape = pt.shape(rpcMinimum);
 export const widgetMenuItem = {
   label: transformableOr(pt.string),
   icon: pt.string,
-  method: transformable,
+  method: transformable
 };
 export const widgetMenuItemShape = pt.shape(widgetMenuItem);
 
@@ -103,10 +104,10 @@ export const widget = {
   responsive: pt.bool,
   frameProps: pt.shape({
     title: transformableOr(pt.string),
-    menuItems: pt.arrayOf(widgetMenuItemShape),
+    menuItems: pt.arrayOf(widgetMenuItemShape)
   }),
   contentProps: pt.object,
-  hoc: transformable,
+  hoc: transformable
 };
 export const widgetShape = pt.shape(widget);
 
@@ -115,5 +116,5 @@ export const assetTypeBase = {
   channels: pt.objectOf(pt.string),
   rpcs: pt.objectOf(pt.string),
   widgetsInDashboard: pt.arrayOf(pt.oneOfType(pt.string, pt.number)),
-  widgets: pt.arrayOf(widgetShape),
+  widgets: pt.arrayOf(widgetShape)
 };
