@@ -1,4 +1,5 @@
-import joi from "joi";
+import joi from 'joi';
+import { AssetType as AssetTypeBase } from '../AssetType';
 
 const transformable = joi.array();
 const transformableOr = type => joi.alternatives().try([type, transformable]);
@@ -6,7 +7,7 @@ const transformableOr = type => joi.alternatives().try([type, transformable]);
 const WidgetMenuItem = joi.object().keys({
   label: transformableOr(joi.string()).required(),
   icon: joi.string(),
-  method: transformable.required()
+  method: transformable.required(),
 });
 const Widget = joi
   .object()
@@ -20,15 +21,15 @@ const Widget = joi
     frameProps: joi.object({
       title: transformableOr(joi.string()),
       tooltip: transformableOr(joi.string()),
-      menuItems: joi.array().items(WidgetMenuItem)
+      menuItems: joi.array().items(WidgetMenuItem),
     }),
     contentProps: joi.object(),
     hoc: transformable,
-    initNotifications: joi.number()
+    initNotifications: joi.number(),
   });
-const AssetType = assetTypeMinimum.keys({
+export const AssetType = AssetTypeBase.keys({
   channels: joi.object().pattern(joi.any(), joi.string()),
   rpcs: joi.object().pattern(joi.any(), joi.string()),
   widgetsInDashboard: joi.array().items(joi.string(), joi.number()),
-  widgets: joi.array().items(Widget)
+  widgets: joi.array().items(Widget),
 });
