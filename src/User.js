@@ -4,11 +4,10 @@ import { Identity } from './Identity';
 import { metaMerge } from './utils';
 
 export const User = metaMerge(
-  {
+  Identity.meta({
     name: 'User',
     super: 'Identity',
-  },
-  Identity.meta().keys({
+  }).keys({
     name: joi.string().required(),
   }),
 );
