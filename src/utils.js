@@ -1,3 +1,5 @@
+import joi from 'joi';
+
 const R = require('ramda');
 
 export const metaMerge = R.evolve({
@@ -6,3 +8,9 @@ export const metaMerge = R.evolve({
     R.reduce((r, meta) => ({ ...r, ...meta }), {}),
   ),
 });
+
+export const transformable = joi
+  .array()
+  .min(1)
+  .items(joi.string().required(), joi.any());
+export const transformableOr = type => joi.alternatives().try([type, transformable]);
