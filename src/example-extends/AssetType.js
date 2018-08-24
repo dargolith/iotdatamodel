@@ -1,14 +1,13 @@
 import joi from 'joi';
 import { AssetType as AssetTypeBase } from '../AssetType';
-
-const transformable = joi.array();
-const transformableOr = type => joi.alternatives().try([type, transformable]);
+import { transformable, transformableOr } from '../utils';
 
 const WidgetMenuItem = joi.object().keys({
   label: transformableOr(joi.string()).required(),
   icon: joi.string(),
   method: transformable.required(),
 });
+
 const Widget = joi
   .object()
   .unknown()
@@ -27,6 +26,7 @@ const Widget = joi
     hoc: transformable,
     initNotifications: joi.number(),
   });
+
 export const AssetType = AssetTypeBase.keys({
   channels: joi.object().pattern(joi.any(), joi.string()),
   rpcs: joi.object().pattern(joi.any(), joi.string()),
