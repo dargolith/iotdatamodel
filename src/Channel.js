@@ -10,4 +10,8 @@ export const Channel = joi
       .required()
       .meta({ unique: true }),
     name: joi.string().required(),
+    historyConf: joi.object().keys({
+      enabled: joi.boolean().required(),
+      tail: joi.number().positive(),
+    }),
   });
