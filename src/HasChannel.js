@@ -4,4 +4,6 @@ export const HasChannel = joi
   .object()
   .meta({ name: 'HasChannel', super: 'E', uniqueEdge: true })
   .unknown()
-  .keys({});
+  .keys({
+    id: joi.string().required(),
+  });
