@@ -32,4 +32,12 @@ export const AssetType = AssetTypeBase.keys({
   rpcs: joi.object().pattern(joi.any(), joi.string()),
   widgetsInDashboard: joi.array().items(joi.string(), joi.number()),
   widgets: joi.array().items(Widget),
+  childrenList: joi.object().keys({
+    columnHeadingLabels: joi.array().items(transformableOr(joi.string())),
+    columnValueConf: joi.array().items(joi.string(), joi.func()),
+    avatar: joi.alternatives().try(joi.string(), joi.func()),
+  }),
+  mapPin: joi.object().keys({
+    popupInfo: transformableOr(joi.string()),
+  }),
 });

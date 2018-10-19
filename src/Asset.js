@@ -10,4 +10,5 @@ export const Asset = joi
       .required()
       .meta({ unique: true }),
     name: joi.string().required(),
+    channels: joi.object().pattern(joi.any(), joi.string()), // TODO: string->rid
   });
