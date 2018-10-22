@@ -1,21 +1,22 @@
 import joi from 'joi';
-import { transformable, transformableOr } from '../utils';
+import { transformableOr } from '../utils';
 
 export const Notification = joi
   .object()
   .unknown()
   .keys({
     ts: joi.string().required(),
-    type: joi.string().required(),
-    entityRid: joi.string(),
-    entityName: joi.string(), // "Cached". Remove??
-    severity: joi.string().valid('info', 'minor', 'major', 'critical'),
-    image: joi.string(),
-    title: transformableOr(joi.string()),
-    text: transformableOr(joi.string()),
-    // info, warning, error, critical ? (+ indeterminate?)
-    // low, medium, high, critical ?
-    // info, minor, major, critical ?
+    type: joi.string(),
+    entity: joi.object().keys({
+      rid: joi.string(),
+      class: joi.string(),
+    }),
+    severity: joi
+      .string()
+      .required()
+      .valid('info', 'minor', 'major', 'critical'),
+    title: transformableOr(joi.string()).required(),
+    text: transformableOr(joi.string()).required(),
     // status: joi.string(),
     // unseen, seen, escalated, acknowledged, archived ?
   });
