@@ -7,7 +7,8 @@
     "test": "npx babel-node ./test/index.js",
     "test-conf": "npx babel-node ./test/configuration/index.js",
     "test-notification": "npx babel-node ./test/notification/index.js",
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
