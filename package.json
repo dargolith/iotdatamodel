@@ -2,12 +2,12 @@
   "name": "iotdatamodel",
   "version": "0.1.1",
   "description": "Generic data model for Internet of Things",
-  "main": "build/index.js",
+  "main": "lib",
   "scripts": {
     "test": "npx babel-node ./test/index.js",
     "test-conf": "npx babel-node ./test/configuration/index.js",
     "test-notification": "npx babel-node ./test/notification/index.js",
-    "build": "babel src -d build"
+    "build": "babel src -d lib"
   },
   "repository": {
     "type": "git",
