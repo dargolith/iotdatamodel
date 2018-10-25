@@ -42,24 +42,8 @@ const Edges = {
 };
 
 const datamodel = {
-  Asset,
-  AssetType,
-  Channel,
-  ChannelType,
-  Configuration,
-  HasChannel,
-  HasChild,
-  HasConfiguration,
-  HasProcedure,
-  HasRole,
-  HasType,
-  Identity,
-  Procedure,
-  Role,
-  Rule,
-  Thing,
-  ThingType,
-  User,
+  ...Vertices,
+  ...Edges,
   Vertices,
   Edges,
 };

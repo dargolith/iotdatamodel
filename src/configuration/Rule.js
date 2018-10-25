@@ -1,5 +1,5 @@
 import joi from 'joi';
-import { transformable } from './utils';
+import { transformable } from '../utils';
 
 const rpcCall = joi
   .array()

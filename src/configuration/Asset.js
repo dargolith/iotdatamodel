@@ -10,5 +10,8 @@ export const Asset = joi
       .required()
       .meta({ unique: true }),
     name: joi.string().required(),
-    channels: joi.object().pattern(joi.any(), joi.string()), // TODO: string->rid
+    // type: joi.string(),
+    // channels: joi.object().pattern(joi.any(), joi.string()),
+    // children: joi.array().items(joi.string()),
+    // parents: joi.array().items(joi.string()),
   });

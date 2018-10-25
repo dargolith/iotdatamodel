@@ -1,12 +1,20 @@
 import joi from 'joi';
-import * as R from 'ramda';
+// import * as R from 'ramda';
 
-export const metaMerge = R.evolve({
-  _meta: R.compose(
-    R.of,
-    R.reduce((r, meta) => ({ ...r, ...meta }), {}),
-  ),
-});
+// export const metaMerge = R.evolve({
+//   _meta: R.compose(
+//     R.of,
+//     R.reduce((r, meta) => ({ ...r, ...meta }), {}),
+//   ),
+// });
+
+// TODO: Make the function below immutable! The above ramda attempt is immutable but breaks the joi
+// object. For instance .describe() is no longer present on the resulting object.
+export function metaMerge(schema) {
+  const newMeta = [schema._meta.reduce((result, meta) => ({ ...result, ...meta }))];
+  schema._meta = newMeta;
+  return schema;
+}
 
 export const transformable = joi
   .array()

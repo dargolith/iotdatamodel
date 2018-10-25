@@ -2,7 +2,7 @@ import joi from 'joi';
 
 export const Identity = joi
   .object()
-  .meta({ name: 'Identity', super: 'V' })
+  .meta({ name: 'Identity', super: 'V', abstract: true })
   .unknown()
   .keys({
     rid: joi

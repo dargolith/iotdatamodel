@@ -1,5 +1,5 @@
 import { Identity } from './Identity';
-import { metaMerge } from './utils';
+import { metaMerge } from '../utils';
 
 export const Thing = metaMerge(
   Identity.meta({

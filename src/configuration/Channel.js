@@ -14,4 +14,5 @@ export const Channel = joi
       enabled: joi.boolean().required(),
       tail: joi.number().positive(),
     }),
+    tags: joi.array().items(joi.string()),
   });

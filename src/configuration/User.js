@@ -1,14 +1,13 @@
 import joi from 'joi';
 
 import { Identity } from './Identity';
-import { metaMerge } from './utils';
+import { metaMerge } from '../utils';
 
 export const User = metaMerge(
   Identity.meta({
     name: 'User',
     super: 'Identity',
   }).keys({
-    id: joi.string().required(),
     name: joi.string().required(),
   }),
 );

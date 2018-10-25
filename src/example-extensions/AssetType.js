@@ -1,5 +1,5 @@
 import joi from 'joi';
-import { AssetType as AssetTypeBase } from '../AssetType';
+import { AssetType as AssetTypeBase } from '../configuration/AssetType';
 import { transformable, transformableOr } from '../utils';
 
 const WidgetMenuItem = joi.object().keys({
