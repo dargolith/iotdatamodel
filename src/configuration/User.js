@@ -8,6 +8,7 @@ export const User = metaMerge(
     name: 'User',
     super: 'Identity',
   }).keys({
+    id: joi.string().meta({ unique: true, inherited: true }),
     name: joi.string().required(),
   }),
 );
