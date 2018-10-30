@@ -17,7 +17,7 @@ import { Thing } from './Thing';
 import { ThingType } from './ThingType';
 import { User } from './User';
 
-const Vertices = {
+export const Vertices = {
   Asset,
   AssetType,
   Channel,
@@ -32,7 +32,7 @@ const Vertices = {
   User,
 };
 
-const Edges = {
+export const Edges = {
   HasChannel,
   HasChild,
   HasConfiguration,
@@ -44,8 +44,6 @@ const Edges = {
 const datamodel = {
   ...Vertices,
   ...Edges,
-  Vertices,
-  Edges,
 };
 
 export default datamodel;
