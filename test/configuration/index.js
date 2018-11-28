@@ -1,5 +1,5 @@
 import test from 'blue-tape';
-import confDatamodel from '../../src/configuration';
+import confDatamodel, { Vertices, Edges } from '../../src/configuration';
 import { Asset } from '../../src/configuration/Asset';
 import { AssetType } from '../../src/configuration/AssetType';
 import { Channel } from '../../src/configuration/Channel';
@@ -22,7 +22,7 @@ import { User } from '../../src/configuration/User';
 
 export default function runTests() {
   test('Implicitly imported entity (vertex) schemas exist', async t => {
-    Object.keys(confDatamodel.Vertices).forEach(entity => {
+    Object.keys(Vertices).forEach(entity => {
       console.log(`Verifying implicit schema ${entity}...`);
       t.ok(JSON.stringify(confDatamodel[entity].describe()));
       t.equal(confDatamodel[entity].describe().meta[0].name, entity);
@@ -30,7 +30,7 @@ export default function runTests() {
   });
 
   test('Implicitly imported connection (edge) schemas exist', async t => {
-    Object.keys(confDatamodel.Edges).forEach(connection => {
+    Object.keys(Edges).forEach(connection => {
       console.log(`Verifying implicit schema ${connection}...`);
       t.ok(JSON.stringify(confDatamodel[connection].describe()));
       t.equal(confDatamodel[connection].describe().meta[0].name, connection);
