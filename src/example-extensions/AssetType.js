@@ -22,13 +22,13 @@ const Widget = joi
       tooltip: transformableOr(joi.string()),
       menuItems: joi.array().items(WidgetMenuItem),
     }),
-    contentProps: joi.object(),
+    contentProps: transformableOr(joi.object()),
     hoc: transformable,
     initNotifications: joi.number(),
   });
 
 export const AssetType = AssetTypeBase.keys({
-  channels: joi.object().pattern(joi.any(), joi.string()),
+  channels: joi.array().items(joi.string()),
   rpcs: joi.object().pattern(joi.any(), joi.string()),
   widgetsInDashboard: joi.array().items(joi.string(), joi.number()),
   widgets: joi.array().items(Widget),
