@@ -15,7 +15,7 @@ export const ChannelType = joi
       .meta({ unique: true }),
     type: joi.string(),
     format: joi.string(),
-    // unit: joi.string(),
+    // unit: joi.array().items(joi.any()),
     // ttl: joi.date(),
-    // labelIds: joi.array().items(joi.string())
+    // legend: joi.array().items(joi.string()),
   });
