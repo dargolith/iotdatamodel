@@ -9,7 +9,10 @@ export const Asset = joi
       .string()
       .required()
       .meta({ unique: true }),
-    name: joi.string().required(),
+    id: joi
+      .string()
+      .required()
+      .meta({ unique: true }),
     // type: joi.string(),
     // channels: joi.object().pattern(joi.any(), joi.string()),
     // children: joi.array().items(joi.string()),

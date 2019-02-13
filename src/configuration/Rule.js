@@ -15,7 +15,10 @@ export const Rule = joi
       .string()
       .required()
       .meta({ unique: true }),
-    name: joi.string(),
+    id: joi
+      .string()
+      .required()
+      .meta({ unique: true }),
     active: joi.boolean(),
     actuator: joi.string(),
     ttl: joi.date(),

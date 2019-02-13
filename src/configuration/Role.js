@@ -9,7 +9,10 @@ export const Role = joi
       .string()
       .required()
       .meta({ unique: true }),
-    name: joi.string().required(),
+    id: joi
+      .string()
+      .required()
+      .meta({ unique: true }),
     // TODO: Specify sub, pub, rpc access objects more thoroughly?
     rpc: joi.object(),
     pub: joi.object(),
