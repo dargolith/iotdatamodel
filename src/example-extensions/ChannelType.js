@@ -8,4 +8,5 @@ export const ChannelType = ChannelTypeBase.keys({
   widgets: joi.array().items(Widget),
   // name: joi.string(),
   // ttl: joi.date(),
+  // toTranslate: joi.array().items(joi.string()) // paths. ex: 'pl[0].text'
 });
