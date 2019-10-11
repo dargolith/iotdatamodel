@@ -1,4 +1,4 @@
-import joi from 'joi';
+import joi from '@hapi/joi';
 import { ChannelType as ChannelTypeBase } from '../configuration/ChannelType';
 import { Widget } from './widget';
 

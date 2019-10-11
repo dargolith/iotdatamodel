@@ -46,4 +46,6 @@ const datamodel = {
   ...Edges,
 };
 
+export const formatVersion = '2.0';
+
 export default datamodel;

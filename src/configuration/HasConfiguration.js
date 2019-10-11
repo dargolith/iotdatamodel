@@ -1,4 +1,4 @@
-import joi from 'joi';
+import joi from '@hapi/joi';
 
 export const HasConfiguration = joi
   .object()

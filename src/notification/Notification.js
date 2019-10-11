@@ -1,4 +1,4 @@
-import joi from 'joi';
+import joi from '@hapi/joi';
 import { transformableOr } from '../utils';
 
 export const Notification = joi
