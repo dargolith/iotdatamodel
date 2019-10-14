@@ -1,6 +1,6 @@
 {
   "name": "iotdatamodel",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Generic data model for Internet of Things",
   "main": "lib",
   "scripts": {
