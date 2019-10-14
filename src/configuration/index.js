@@ -8,6 +8,7 @@ import { HasChild } from './HasChild';
 import { HasConfiguration } from './HasConfiguration';
 import { HasProcedure } from './HasProcedure';
 import { HasRole } from './HasRole';
+import { HasRule } from './HasRule';
 import { HasType } from './HasType';
 import { Identity } from './Identity';
 import { Procedure } from './Procedure';
@@ -38,6 +39,7 @@ export const Edges = {
   HasConfiguration,
   HasProcedure,
   HasRole,
+  HasRule,
   HasType,
 };
 
@@ -46,6 +48,6 @@ const datamodel = {
   ...Edges,
 };
 
-export const formatVersion = '2.0';
+export const formatVersion = '2.1';
 
 export default datamodel;

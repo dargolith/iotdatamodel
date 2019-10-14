@@ -23,4 +23,5 @@ export const Rule = joi
     actions: joi.array(),
     resetCondition: joi.array(),
     resetActions: joi.array(),
+    // assets: joi.array().items(joi.string()),
   });
