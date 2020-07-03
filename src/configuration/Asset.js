@@ -9,12 +9,18 @@ export const Asset = joi
       .string()
       .required()
       .meta({ unique: true }),
-    id: joi
-      .string()
-      .required()
-      .meta({ unique: true }),
-    // type: joi.string(),
-    // channels: joi.object().pattern(joi.any(), joi.string()),
-    // children: joi.array().items(joi.string()),
-    // parents: joi.array().items(joi.string()),
+    name: joi.string().required(),
+    type: joi.string(),
+    channels: joi
+      .object()
+      .pattern(joi.any(), joi.string())
+      .meta({ linked: true }),
+    children: joi
+      .array()
+      .items(joi.string())
+      .meta({ linked: true }),
+    parents: joi
+      .array()
+      .items(joi.string())
+      .meta({ linked: true }),
   });

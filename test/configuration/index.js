@@ -1,4 +1,4 @@
-import test from 'blue-tape';
+import { test } from 'tap';
 import confDatamodel, { Vertices, Edges } from '../../src/configuration';
 import { Asset } from '../../src/configuration/Asset';
 import { AssetType } from '../../src/configuration/AssetType';

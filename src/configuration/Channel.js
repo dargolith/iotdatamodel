@@ -9,13 +9,11 @@ export const Channel = joi
       .string()
       .required()
       .meta({ unique: true }),
-    id: joi
-      .string()
-      .required()
-      .meta({ unique: true }),
-    historyConf: joi.object().keys({
-      enabled: joi.boolean().required(),
-      tail: joi.number().positive(),
+    name: joi.string().required(),
+    history: joi.object().keys({
+      enabled: joi.boolean(),
+      limit: joi.number().positive(),
+      ttl: joi.number().positive(),
     }),
     tags: joi.array().items(joi.string()),
   });
