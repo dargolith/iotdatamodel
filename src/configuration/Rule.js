@@ -5,9 +5,6 @@ export const Rule = joi
   .meta({ name: 'Rule', super: 'V' })
   .unknown()
   .keys({
-    rid: joi
-      .string()
-      .required()
-      .meta({ unique: true }),
+    rid: joi.string().required().meta({ unique: true }),
     name: joi.string().required(),
   });

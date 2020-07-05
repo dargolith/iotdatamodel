@@ -5,12 +5,6 @@ export const Identity = joi
   .meta({ name: 'Identity', super: 'V', abstract: true })
   .unknown()
   .keys({
-    rid: joi
-      .string()
-      .required()
-      .meta({ unique: true }),
-    id: joi
-      .string()
-      .required()
-      .meta({ unique: true }),
+    rid: joi.string().required().meta({ unique: true }),
+    id: joi.string().required().meta({ unique: true }),
   });

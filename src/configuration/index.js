@@ -48,6 +48,7 @@ const datamodel = {
   ...Edges,
 };
 
-export const formatVersion = '2.1';
+export const formatVersion = '3.0';
 
+// eslint-disable-next-line import/no-default-export
 export default datamodel;
