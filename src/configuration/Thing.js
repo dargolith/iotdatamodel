@@ -8,6 +8,6 @@ export const Thing = metaMerge(
     name: 'Thing',
     super: 'Identity',
   }).keys({
-    type: joi.string().meta({ linked: true }),
+    type: joi.string().meta({ linked: 'ThingType' }),
   }),
 );

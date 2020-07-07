@@ -7,7 +7,7 @@ export const Channel = joi
   .keys({
     rid: joi.string().required().meta({ unique: true }),
     name: joi.string().required(),
-    type: joi.string().meta({ linked: true }),
+    type: joi.string().meta({ linked: 'ChannelType' }),
     history: joi.object().keys({
       enabled: joi.boolean(),
       limit: joi.number().positive(),
