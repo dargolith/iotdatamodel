@@ -1,4 +1,4 @@
-import joi from '@hapi/joi';
+import joi from 'joi';
 import { Rule as RuleBase } from '../configuration/Rule';
 
 export const Rule = RuleBase.keys({

@@ -1,4 +1,4 @@
-import joi from '@hapi/joi';
+import joi from 'joi';
 
 import { Identity } from './Identity';
 import { metaMerge } from '../utils';

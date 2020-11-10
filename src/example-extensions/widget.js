@@ -1,4 +1,4 @@
-import joi from '@hapi/joi';
+import joi from 'joi';
 import { transformable, transformableOr } from '../utils';
 
 const WidgetMenuItem = joi.object().keys({

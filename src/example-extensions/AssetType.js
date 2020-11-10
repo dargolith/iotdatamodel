@@ -1,4 +1,4 @@
-import joi from '@hapi/joi';
+import joi from 'joi';
 import { AssetType as AssetTypeBase } from '../configuration/AssetType';
 import { transformableOr } from '../utils';
 import { Widget } from './widget';
