@@ -1,0 +1,28 @@
+{
+  "$id": "some uri?",
+  "title": "Config",
+  "description": "An entity representing a general configuration object",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "V"
+    }
+  },
+  "required": ["rid", "name"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the Config",
+      "type": "string"
+    },
+    "name": {
+      "description": "The name of the Config",
+      "type": "string",
+      "index": "notunique"
+    },
+    "type": {
+      "description": "The ConfigType of the Config",
+      "type": "string",
+      "link": "ConfigType"
+    }
+  }
+}

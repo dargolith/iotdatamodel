@@ -1,0 +1,48 @@
+{
+  "$id": "some uri?",
+  "title": "Asset",
+  "description": "An entity related to something of importance to the end user",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "V"
+    }
+  },
+  "required": ["rid", "name"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the Asset",
+      "type": "string"
+    },
+    "name": {
+      "description": "The name of the Asset",
+      "type": "string",
+      "index": "unique"
+    },
+    "type": {
+      "description": "The AssetType of the Asset",
+      "type": "string",
+      "link": "AssetType"
+    },
+    "channels": {
+      "description": "The Channels of the Asset",
+      "type": "object",
+      "link": "Channel"
+    },
+    "procedures": {
+      "description": "The Procedures of the Asset",
+      "type": "object",
+      "link": "Procedure"
+    },
+    "children": {
+      "description": "The child Assets of the Asset",
+      "type": "object",
+      "link": "Asset"
+    },
+    "parents": {
+      "description": "The parent Assets of the Asset",
+      "type": "object",
+      "link": "Asset"
+    }
+  }
+}

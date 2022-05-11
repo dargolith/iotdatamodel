@@ -1,0 +1,22 @@
+{
+  "$id": "some uri?",
+  "title": "HasProcedure",
+  "description": "An entity linking Assets or Things to Procedure entities",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "E"
+    }
+  },
+  "required": ["rid", "id"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the HasProcedure link",
+      "type": "string"
+    },
+    "id": {
+      "description": "The custom id of the linked Procedure for an Asset or Thing",
+      "type": "string"
+    }
+  }
+}

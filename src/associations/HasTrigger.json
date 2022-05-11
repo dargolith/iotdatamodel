@@ -1,0 +1,19 @@
+{
+  "$id": "some uri?",
+  "title": "HasTrigger",
+  "description": "An entity linking a rule enging Rule to a rule engine Trigger",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "E",
+      "uniqueEdge": true
+    }
+  },
+  "required": ["rid"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the HasTrigger link",
+      "type": "string"
+    }
+  }
+}

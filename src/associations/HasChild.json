@@ -1,0 +1,19 @@
+{
+  "$id": "some uri?",
+  "title": "HasChild",
+  "description": "An entity linking a parent Asset to a child Asset",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "E",
+      "uniqueEdge": true
+    }
+  },
+  "required": ["rid"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the HasChild link",
+      "type": "string"
+    }
+  }
+}

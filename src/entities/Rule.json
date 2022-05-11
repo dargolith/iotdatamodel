@@ -1,0 +1,65 @@
+{
+  "$id": "some uri?",
+  "title": "Rule",
+  "description": "An entity representing a rule engine rule",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "V"
+    }
+  },
+  "required": ["rid", "id"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the Rule",
+      "type": "string"
+    },
+    "id": {
+      "description": "The id of the Rule",
+      "type": "string",
+      "index": "unique"
+    },
+    "active": {
+      "description": "A boolean stating if the rule is active, i.e. can be fired, or not.",
+      "type": "boolean"
+    },
+    "ttl": {
+      "description": "An ISO timestamp stating when the rule will be set to inactive.",
+      "type": "string"
+    },
+    "onLoad": {
+      "description": "Ploson code to run once when loading. For instance to create reusable constants and functions.",
+      "type": "array"
+    },
+    "triggered": {
+      "type": "object",
+      "properties": {
+        "cooldown": {
+          "description": "A rule will not be fired again unless this number of seconds has passed.",
+          "type": "number"
+        },
+        "resetCondition": {
+          "description": "Ploson code to check if rule should reset, if it has fired.",
+          "type": "array"
+        },
+        "resetAction": {
+          "description": "Ploson code to execute when the rule resets, i.e. when the resetCondition has been met.",
+          "type": "array"
+        }
+      }
+    },
+    "condition": {
+      "description": "Ploson code to determine if the rule should fire, i.e. run actions etc.",
+      "type": "array"
+    },
+    "action": {
+      "description": "Ploson code to execute when condition is met and rule is ready to be fired (reset, cooldown, etc).",
+      "type": "array"
+    },
+    "triggers": {
+      "description": "Triggers connected to this Rule.",
+      "type": "string",
+      "link": "Trigger"
+    }
+  }
+}

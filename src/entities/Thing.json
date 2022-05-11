@@ -1,0 +1,38 @@
+{
+  "$id": "some uri?",
+  "title": "Thing",
+  "description": "An entity representing a thing",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "V"
+    }
+  },
+  "required": ["rid", "id"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the Thing",
+      "type": "string"
+    },
+    "id": {
+      "description": "The id of the Thing",
+      "type": "string",
+      "index": "unique"
+    },
+    "type": {
+      "description": "The ThingType of the Thing",
+      "type": "string",
+      "link": "ThingType"
+    },
+    "channels": {
+      "description": "The Channels of the Thing",
+      "type": "object",
+      "link": "Channel"
+    },
+    "procedures": {
+      "description": "The Procedures of the Thing",
+      "type": "object",
+      "link": "Procedure"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$id": "some uri?",
+  "title": "Trigger",
+  "description": "An entity representing a rule engine trigger",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "V"
+    }
+  },
+  "required": ["rid", "id"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the Trigger",
+      "type": "string"
+    },
+    "id": {
+      "description": "The id of the Trigger",
+      "type": "string",
+      "index": "unique"
+    },
+    "targets": {
+      "description": "The Rules this trigger will trigger when the trigger conditions are met.",
+      "type": "array",
+      "link": "Trigger"
+    }
+  }
+}

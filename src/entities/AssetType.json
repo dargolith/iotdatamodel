@@ -1,0 +1,23 @@
+{
+  "$id": "some uri?",
+  "title": "AssetType",
+  "description": "An entity representing an asset type",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "V"
+    }
+  },
+  "required": ["rid", "id"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the AssetType",
+      "type": "string"
+    },
+    "id": {
+      "description": "The id of the AssetType",
+      "type": "string",
+      "index": "unique"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$id": "some uri?",
+  "title": "ProcedureType",
+  "description": "An entity representing a procedure type",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "V"
+    }
+  },
+  "required": ["rid", "id"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the ProcedureType",
+      "type": "string"
+    },
+    "id": {
+      "description": "The id of the ProcedureType",
+      "type": "string",
+      "index": "unique"
+    }
+  }
+}

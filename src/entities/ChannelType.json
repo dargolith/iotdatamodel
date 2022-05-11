@@ -1,0 +1,23 @@
+{
+  "$id": "some uri?",
+  "title": "ChannelType",
+  "description": "An entity representing a channel type",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "V"
+    }
+  },
+  "required": ["rid", "id"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the ChannelType",
+      "type": "string"
+    },
+    "id": {
+      "description": "The id of the ChannelType",
+      "type": "string",
+      "index": "unique"
+    }
+  }
+}
