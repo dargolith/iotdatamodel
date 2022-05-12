@@ -4,6 +4,9 @@
   "version": "4.0.1",
   "description": "Generic data model for Internet of Things",
   "main": "index.mjs",
+  "engines": {
+    "node": ">=14.17.0"
+  },
   "scripts": {
     "test": "node test.mjs"
   },
