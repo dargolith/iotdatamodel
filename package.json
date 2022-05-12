@@ -1,0 +1,26 @@
+{
+  "name": "iotdatamodel",
+  "type": "module",
+  "version": "4.0.0",
+  "description": "Generic data model for Internet of Things",
+  "main": "./src/index.mjs",
+  "scripts": {
+    "test": "node test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dargolith/iotdatamodel.git"
+  },
+  "keywords": [
+    "datamodel",
+    "json",
+    "schema",
+    "iot"
+  ],
+  "author": "Jesper Ahlberg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dargolith/iotdatamodel/issues"
+  },
+  "homepage": "https://github.com/dargolith/iotdatamodel#readme"
+}
