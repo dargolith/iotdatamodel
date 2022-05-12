@@ -3,7 +3,7 @@
   "type": "module",
   "version": "4.0.0",
   "description": "Generic data model for Internet of Things",
-  "main": "./src/index.mjs",
+  "main": "index.mjs",
   "scripts": {
     "test": "node test.mjs"
   },
