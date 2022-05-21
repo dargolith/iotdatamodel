@@ -8,7 +8,7 @@ const x = ver.split('.').slice(0, -1).join('.');
 replace({
   regex: "datamodelVersion = '[0-9.]+'",
   replacement: `datamodelVersion = '${x}'`,
-  paths: ['./index.mjs'],
+  paths: ['./imports.mjs'],
   recursive: false,
   silent: false,
 });
