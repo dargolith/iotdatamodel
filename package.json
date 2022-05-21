@@ -1,7 +1,7 @@
 {
   "name": "iotdatamodel",
   "type": "module",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Generic data model for Internet of Things",
   "main": "index.cjs",
   "engines": {
