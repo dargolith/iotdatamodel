@@ -12,7 +12,7 @@
 # production
 /build
 /dist
-/index.js
+/index.*
 
 # misc
 .DS_Store
