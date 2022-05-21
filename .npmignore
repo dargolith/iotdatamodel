@@ -1,0 +1,10 @@
+/node_modules
+/test
+/coverage
+.nyc_output
+.babelrc.json
+.prettierrc.json
+.eslintrc.json
+jest.config.js
+.editorconfig
+.eslintignore

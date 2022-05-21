@@ -3,12 +3,23 @@
   "type": "module",
   "version": "5.0.0",
   "description": "Generic data model for Internet of Things",
-  "main": "index.mjs",
+  "main": "dist/index.cjs",
   "engines": {
     "node": ">=14.17.0"
   },
+  "source": "index.mjs",
+  "exports": "dist/index.mjs",
+  "INACTIVE_exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.mjs"
+  },
+  "module": "dist/index.module.mjs",
+  "INACTIVE_module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
   "scripts": {
-    "test": "node test.mjs"
+    "test": "node test.mjs",
+    "postversion": "node versionexport.js",
+    "build": "microbundle"
   },
   "repository": {
     "type": "git",
@@ -25,5 +36,9 @@
   "bugs": {
     "url": "https://github.com/dargolith/iotdatamodel/issues"
   },
-  "homepage": "https://github.com/dargolith/iotdatamodel#readme"
+  "homepage": "https://github.com/dargolith/iotdatamodel#readme",
+  "devDependencies": {
+    "microbundle": "^0.15.0",
+    "replace": "^1.2.1"
+  }
 }

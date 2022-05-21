@@ -17,7 +17,7 @@ import hasProcedureSchema from './src/associations/HasProcedure.json';
 import hasTriggerSchema from './src/associations/HasTrigger.json';
 import hasTypeSchema from './src/associations/HasType.json';
 
-export const datamodelVersion = '0.1';
+export const datamodelVersion = '5.0';
 
 export const entitySchemas = [
   assetSchema,
