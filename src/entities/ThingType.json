@@ -1,5 +1,5 @@
 {
-  "$id": "some uri?",
+  "$id": "https://raw.githubusercontent.com/dargolith/iotdatamodel/master/src/entities/ThingType.json",
   "title": "ThingType",
   "description": "An entity representing a thing type",
   "type": "object",
@@ -18,6 +18,10 @@
       "description": "The id of the ThingType",
       "type": "string",
       "index": "unique"
+    },
+    "name": {
+      "description": "The name of the ThingType",
+      "type": "string"
     }
   }
 }

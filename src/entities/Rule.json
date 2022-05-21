@@ -1,5 +1,5 @@
 {
-  "$id": "some uri?",
+  "$id": "https://raw.githubusercontent.com/dargolith/iotdatamodel/master/src/entities/Rule.json",
   "title": "Rule",
   "description": "An entity representing a rule engine rule",
   "type": "object",
@@ -18,6 +18,10 @@
       "description": "The id of the Rule",
       "type": "string",
       "index": "unique"
+    },
+    "name": {
+      "description": "The name of the Rule",
+      "type": "string"
     },
     "active": {
       "description": "A boolean stating if the rule is active, i.e. can be fired, or not.",

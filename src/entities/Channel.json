@@ -1,5 +1,5 @@
 {
-  "$id": "some uri?",
+  "$id": "https://raw.githubusercontent.com/dargolith/iotdatamodel/master/src/entities/Channel.json",
   "title": "Channel",
   "description": "An entity representing a data channel",
   "type": "object",
@@ -8,16 +8,20 @@
       "super": "V"
     }
   },
-  "required": ["rid", "name"],
+  "required": ["rid", "id"],
   "properties": {
     "rid": {
       "description": "The record id of the Channel",
       "type": "string"
     },
-    "name": {
-      "description": "The name of the Channel",
+    "id": {
+      "description": "The id of the Channel",
       "type": "string",
       "index": "unique"
+    },
+    "name": {
+      "description": "The name of the Asset",
+      "type": "string"
     },
     "type": {
       "description": "The ChannelType of the Channel",

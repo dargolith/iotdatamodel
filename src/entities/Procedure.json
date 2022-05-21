@@ -1,5 +1,5 @@
 {
-  "$id": "some uri?",
+  "$id": "https://raw.githubusercontent.com/dargolith/iotdatamodel/master/src/entities/Procedure.json",
   "title": "Procedure",
   "description": "An entity representing a procedure",
   "type": "object",
@@ -8,16 +8,20 @@
       "super": "V"
     }
   },
-  "required": ["rid", "name"],
+  "required": ["rid", "id"],
   "properties": {
     "rid": {
       "description": "The record id of the Procedure",
       "type": "string"
     },
-    "name": {
-      "description": "The name of the Procedure",
+    "id": {
+      "description": "The id of the Procedure",
       "type": "string",
       "index": "unique"
+    },
+    "name": {
+      "description": "The name of the Procedure",
+      "type": "string"
     },
     "type": {
       "description": "The ProcedureType of the Procedure",

@@ -8,16 +8,20 @@
       "super": "V"
     }
   },
-  "required": ["rid", "name"],
+  "required": ["rid", "id"],
   "properties": {
     "rid": {
       "description": "The record id of the Asset",
       "type": "string"
     },
-    "name": {
-      "description": "The name of the Asset",
+    "id": {
+      "description": "The unique id of the Asset",
       "type": "string",
       "index": "unique"
+    },
+    "name": {
+      "description": "The name of the Asset",
+      "type": "string"
     },
     "type": {
       "description": "The AssetType of the Asset",

@@ -1,5 +1,5 @@
 {
-  "$id": "some uri?",
+  "$id": "https://raw.githubusercontent.com/dargolith/iotdatamodel/master/src/associations/HasChannel.json",
   "title": "HasChannel",
   "description": "An entity linking Assets or Things to Channel entities",
   "type": "object",

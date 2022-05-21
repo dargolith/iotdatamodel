@@ -1,5 +1,5 @@
 {
-  "$id": "some uri?",
+  "$id": "https://raw.githubusercontent.com/dargolith/iotdatamodel/master/src/entities/AssetType.json",
   "title": "AssetType",
   "description": "An entity representing an asset type",
   "type": "object",
@@ -18,6 +18,10 @@
       "description": "The id of the AssetType",
       "type": "string",
       "index": "unique"
+    },
+    "name": {
+      "description": "The name of the AssetType",
+      "type": "string"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "$id": "some uri?",
+  "$id": "https://raw.githubusercontent.com/dargolith/iotdatamodel/master/src/associations/HasConfig.json",
   "title": "HasConfig",
   "description": "An entity linking a Config to another entity",
   "type": "object",
@@ -9,10 +9,14 @@
       "uniqueEdge": true
     }
   },
-  "required": ["rid"],
+  "required": ["rid", "id"],
   "properties": {
     "rid": {
       "description": "The record id of the HasConfig link",
+      "type": "string"
+    },
+    "id": {
+      "description": "The custom id of the linked Config for an entity",
       "type": "string"
     }
   }

@@ -1,5 +1,5 @@
 {
-  "$id": "some uri?",
+  "$id": "https://raw.githubusercontent.com/dargolith/iotdatamodel/master/src/entities/Config.json",
   "title": "Config",
   "description": "An entity representing a general configuration object",
   "type": "object",
@@ -8,14 +8,14 @@
       "super": "V"
     }
   },
-  "required": ["rid", "name"],
+  "required": ["rid", "id"],
   "properties": {
     "rid": {
       "description": "The record id of the Config",
       "type": "string"
     },
-    "name": {
-      "description": "The name of the Config",
+    "id": {
+      "description": "The id of the Config",
       "type": "string",
       "index": "notunique"
     },
@@ -23,6 +23,10 @@
       "description": "The ConfigType of the Config",
       "type": "string",
       "link": "ConfigType"
+    },
+    "name": {
+      "description": "The name of the Config",
+      "type": "string"
     }
   }
 }
