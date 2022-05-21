@@ -3,23 +3,24 @@
   "type": "module",
   "version": "5.0.3",
   "description": "Generic data model for Internet of Things",
-  "main": "index.cjs",
+  "main": "index.mjs",
   "engines": {
     "node": ">=14.17.0"
   },
   "source": "imports.mjs",
-  "exports": "./index.mjs",
-  "INACTIVE_exports": {
+  "INACTIVE_exports": "./index.mjs",
+  "exports": {
     "require": "./index.cjs",
     "default": "./index.mjs"
   },
-  "module": "index.module.mjs",
+  "module": "index.mjs",
   "INACTIVE_module": "index.module.js",
   "unpkg": "index.umd.js",
   "scripts": {
     "test": "node test.mjs",
     "postversion": "node versionexport.js",
-    "build": "microbundle"
+    "build": "microbundle",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
