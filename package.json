@@ -3,24 +3,25 @@
   "type": "module",
   "version": "5.0.4",
   "description": "Generic data model for Internet of Things",
-  "main": "index.mjs",
   "engines": {
     "node": ">=14.17.0"
   },
-  "source": "imports.mjs",
-  "INACTIVE_exports": "./index.mjs",
+  "source": "index.mjs",
+  "main": "dist/iotdm.cjs",
+  "module": "dist/iotdm.esm.js",
+  "umd:main": "dist/iotdm.umd.js",
+  "unpkg": "dist/iotdm.umd.js",
   "exports": {
-    "require": "./index.cjs",
-    "default": "./index.mjs"
+    "require": "./dist/iotdm.cjs",
+    "import": "./dist/iotdm.modern.js",
+    "umd": "./dist/iotdm.umd.js"
   },
-  "module": "index.mjs",
-  "INACTIVE_module": "index.module.js",
-  "unpkg": "index.umd.js",
   "scripts": {
     "test": "node test.mjs",
     "postversion": "node versionexport.js",
-    "build": "microbundle",
-    "prepublishOnly": "npm run build"
+    "build": "microbundle --entry index.mjs --name iotdm --no-sourcemap --generateTypes false",
+    "prepublishOnly": "npm run clean && npm run build",
+    "clean": "rimraf dist"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
   "homepage": "https://github.com/dargolith/iotdatamodel#readme",
   "devDependencies": {
     "microbundle": "^0.15.0",
-    "replace": "^1.2.1"
+    "replace": "^1.2.1",
+    "rimraf": "^3.0.2"
   }
 }

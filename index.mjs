@@ -11,7 +11,7 @@ import thingSchema from './src/entities/Thing.json';
 import thingTypeSchema from './src/entities/ThingType.json';
 import triggerSchema from './src/entities/Trigger.json';
 import hasChannelSchema from './src/associations/HasChannel.json';
-import hasChildSchema from './src/associations/HasChild.json';
+import hasAssetSchema from './src/associations/HasAsset.json';
 import hasConfigSchema from './src/associations/HasConfig.json';
 import hasProcedureSchema from './src/associations/HasProcedure.json';
 import hasTriggerSchema from './src/associations/HasTrigger.json';
@@ -36,7 +36,7 @@ export const entitySchemas = [
 
 export const associationSchemas = [
   hasChannelSchema,
-  hasChildSchema,
+  hasAssetSchema,
   hasConfigSchema,
   hasProcedureSchema,
   hasTriggerSchema,

@@ -2,13 +2,13 @@ const replace = (await import('replace')).default;
 const packjson = await import('./package.json', { assert: { type: 'json' } });
 
 const ver = packjson.default.version;
-const x = ver.split('.').slice(0, -1).join('.');
+const x = ver.split('.').slice(0, 2).join('.');
 // console.log(x);
 
 replace({
-  regex: "datamodelVersion = '[0-9.]+'",
+  regex: "datamodelVersion = '[^']+'",
   replacement: `datamodelVersion = '${x}'`,
-  paths: ['./imports.mjs'],
+  paths: ['./index.mjs'],
   recursive: false,
   silent: false,
 });
