@@ -1,0 +1,22 @@
+{
+  "$id": "https://raw.githubusercontent.com/dargolith/iotdatamodel/master/src/associations/HasAsset.json",
+  "title": "HasAsset",
+  "description": "An entity linking an Asset to a related Asset",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "E"
+    }
+  },
+  "required": ["rid", "id"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the HasAsset link",
+      "type": "string"
+    },
+    "id": {
+      "description": "The custom id of the linked Asset",
+      "type": "string"
+    }
+  }
+}

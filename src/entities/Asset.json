@@ -38,13 +38,8 @@
       "type": "object",
       "link": "Procedure"
     },
-    "children": {
-      "description": "The child Assets of the Asset",
-      "type": "object",
-      "link": "Asset"
-    },
-    "parents": {
-      "description": "The parent Assets of the Asset",
+    "assets": {
+      "description": "The related Assets to this Asset",
       "type": "object",
       "link": "Asset"
     }
