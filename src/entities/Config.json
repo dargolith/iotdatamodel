@@ -21,7 +21,7 @@
     },
     "type": {
       "description": "The ConfigType of the Config",
-      "type": "string",
+      "type": ["string", "null"],
       "link": "ConfigType"
     },
     "name": {

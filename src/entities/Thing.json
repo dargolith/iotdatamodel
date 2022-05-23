@@ -25,7 +25,7 @@
     },
     "type": {
       "description": "The ThingType of the Thing",
-      "type": "string",
+      "type": ["string", "null"],
       "link": "ThingType"
     },
     "channels": {

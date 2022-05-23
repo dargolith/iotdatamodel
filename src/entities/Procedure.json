@@ -25,7 +25,7 @@
     },
     "type": {
       "description": "The ProcedureType of the Procedure",
-      "type": "string",
+      "type": ["string", "null"],
       "link": "ProcedureType"
     }
   }
