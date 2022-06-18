@@ -32,8 +32,7 @@
       "type": "string"
     },
     "onLoad": {
-      "description": "Ploson code to run once when loading. For instance to create reusable constants and functions.",
-      "type": "array"
+      "description": "Ploson code to run once when loading. For instance to create reusable constants and functions."
     },
     "triggered": {
       "type": "object",
@@ -43,22 +42,18 @@
           "type": "number"
         },
         "resetCondition": {
-          "description": "Ploson code to check if rule should reset, if it has fired.",
-          "type": "array"
+          "description": "Ploson code to check if rule should reset, if it has fired."
         },
         "resetAction": {
-          "description": "Ploson code to execute when the rule resets, i.e. when the resetCondition has been met.",
-          "type": "array"
+          "description": "Ploson code to execute when the rule resets, i.e. when the resetCondition has been met."
         }
       }
     },
     "condition": {
-      "description": "Ploson code to determine if the rule should fire, i.e. run actions etc.",
-      "type": "array"
+      "description": "Ploson code to determine if the rule should fire, i.e. run actions etc."
     },
     "action": {
-      "description": "Ploson code to execute when condition is met and rule is ready to be fired (reset, cooldown, etc).",
-      "type": "array"
+      "description": "Ploson code to execute when condition is met and rule is ready to be fired (reset, cooldown, etc)."
     },
     "triggers": {
       "description": "Triggers connected to this Rule.",
