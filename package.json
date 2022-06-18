@@ -1,7 +1,7 @@
 {
   "name": "iotdatamodel",
   "type": "module",
-  "version": "6.0.1-rc.1",
+  "version": "6.0.1-rc.2",
   "description": "Generic data model for Internet of Things",
   "engines": {
     "node": ">=14.17.0"
