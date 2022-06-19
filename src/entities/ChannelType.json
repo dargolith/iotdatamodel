@@ -22,6 +22,11 @@
     "name": {
       "description": "The name of the ChannelType",
       "type": "string"
+    },
+    "configs": {
+      "description": "The Configs of this ChannelType",
+      "type": "object",
+      "link": "Config"
     }
   }
 }

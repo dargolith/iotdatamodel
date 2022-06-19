@@ -42,6 +42,11 @@
       "description": "The related Assets to this Asset",
       "type": "object",
       "link": "Asset"
+    },
+    "configs": {
+      "description": "The Configs of this Asset",
+      "type": "object",
+      "link": "Config"
     }
   }
 }

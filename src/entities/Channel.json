@@ -27,6 +27,11 @@
       "description": "The ChannelType of the Channel",
       "type": ["string", "null"],
       "link": "ChannelType"
+    },
+    "configs": {
+      "description": "The Configs of this Channel",
+      "type": "object",
+      "link": "Config"
     }
   }
 }

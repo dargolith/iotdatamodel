@@ -37,6 +37,11 @@
       "description": "The Procedures of the Thing",
       "type": "object",
       "link": "Procedure"
+    },
+    "configs": {
+      "description": "The Configs of this Thing",
+      "type": "object",
+      "link": "Config"
     }
   }
 }

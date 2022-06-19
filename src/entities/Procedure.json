@@ -27,6 +27,11 @@
       "description": "The ProcedureType of the Procedure",
       "type": ["string", "null"],
       "link": "ProcedureType"
+    },
+    "configs": {
+      "description": "The Configs of this Procedure",
+      "type": "object",
+      "link": "Config"
     }
   }
 }
