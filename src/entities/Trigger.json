@@ -26,7 +26,15 @@
     "targets": {
       "description": "The Rules this trigger will trigger when the trigger conditions are met.",
       "type": "array",
-      "link": "Trigger"
+      "link": "Rule"
+    },
+    "active": {
+      "type": "boolean",
+      "description": "If the trigger is active or disabled"
+    },
+    "trigger": {
+      "type": "array",
+      "description": "The callback actor function that does the triggering of the rules"
     }
   }
 }
