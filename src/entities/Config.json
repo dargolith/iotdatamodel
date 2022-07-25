@@ -19,14 +19,14 @@
       "type": "string",
       "index": "notunique"
     },
+    "name": {
+      "description": "The name of the Config",
+      "type": "string"
+    },
     "type": {
       "description": "The ConfigType of the Config",
       "type": ["string", "null"],
       "link": "ConfigType"
-    },
-    "name": {
-      "description": "The name of the Config",
-      "type": "string"
     }
   }
 }
