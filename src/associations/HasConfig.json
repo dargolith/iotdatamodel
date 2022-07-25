@@ -6,7 +6,8 @@
   "meta": {
     "orientdb": {
       "super": "E",
-      "uniqueEdge": true
+      "uniqueEdge": true,
+      "uniqueIdEdge": true
     }
   },
   "required": ["rid", "id"],

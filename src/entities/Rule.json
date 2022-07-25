@@ -34,20 +34,15 @@
     "onLoad": {
       "description": "Ploson code to run once when loading. For instance to create reusable constants and functions."
     },
-    "triggered": {
-      "type": "object",
-      "properties": {
-        "cooldown": {
-          "description": "A rule will not be fired again unless this number of seconds has passed.",
-          "type": "number"
-        },
-        "resetCondition": {
-          "description": "Ploson code to check if rule should reset, if it has fired."
-        },
-        "resetAction": {
-          "description": "Ploson code to execute when the rule resets, i.e. when the resetCondition has been met."
-        }
-      }
+    "cooldown": {
+      "description": "A rule will not be fired again unless this number of seconds has passed.",
+      "type": "number"
+    },
+    "resetCondition": {
+      "description": "Ploson code to check if rule should reset, if it has fired."
+    },
+    "resetAction": {
+      "description": "Ploson code to execute when the rule resets, i.e. when the resetCondition has been met."
     },
     "condition": {
       "description": "Ploson code to determine if the rule should fire, i.e. run actions etc."

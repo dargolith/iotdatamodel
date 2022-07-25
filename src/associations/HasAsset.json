@@ -5,7 +5,8 @@
   "type": "object",
   "meta": {
     "orientdb": {
-      "super": "E"
+      "super": "E",
+      "uniqueIdEdge": true
     }
   },
   "required": ["rid", "id"],
