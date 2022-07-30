@@ -23,9 +23,9 @@
       "description": "The name of the Trigger",
       "type": "string"
     },
-    "targets": {
+    "rules": {
       "description": "The Rules this trigger will trigger when the trigger conditions are met.",
-      "type": "array",
+      "type": "object",
       "link": "Rule"
     },
     "active": {

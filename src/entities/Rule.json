@@ -49,11 +49,6 @@
     },
     "action": {
       "description": "Ploson code to execute when condition is met and rule is ready to be fired (reset, cooldown, etc)."
-    },
-    "triggers": {
-      "description": "Triggers connected to this Rule.",
-      "type": "string",
-      "link": "Trigger"
     }
   }
 }
