@@ -14,7 +14,7 @@ import hasChannelSchema from './src/associations/HasChannel.json';
 import hasAssetSchema from './src/associations/HasAsset.json';
 import hasConfigSchema from './src/associations/HasConfig.json';
 import hasProcedureSchema from './src/associations/HasProcedure.json';
-import hasTriggerSchema from './src/associations/HasTrigger.json';
+import triggersRuleSchema from './src/associations/TriggersRule.json';
 import hasTypeSchema from './src/associations/HasType.json';
 
 export const datamodelVersion = '8.0';
@@ -39,7 +39,7 @@ export const associationSchemas = [
   hasAssetSchema,
   hasConfigSchema,
   hasProcedureSchema,
-  hasTriggerSchema,
+  triggersRuleSchema,
   hasTypeSchema,
 ];
 
