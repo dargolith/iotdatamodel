@@ -1,0 +1,19 @@
+{
+  "$id": "https://raw.githubusercontent.com/dargolith/iotdatamodel/master/src/associations/ForAsset.json",
+  "title": "ForAsset",
+  "description": "An entity linking a Rule to an Asset",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "E",
+      "uniqueEdge": true
+    }
+  },
+  "required": ["rid"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the ForAsset link",
+      "type": "string"
+    }
+  }
+}

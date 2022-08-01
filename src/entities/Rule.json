@@ -31,6 +31,10 @@
       "description": "An ISO timestamp stating when the rule will be set to inactive.",
       "type": "string"
     },
+    "trigger": {
+      "type": "array",
+      "description": "The callback actor function that does the triggering of the rules"
+    },
     "onLoad": {
       "description": "Ploson code to run once when loading. For instance to create reusable constants and functions."
     },
@@ -49,6 +53,11 @@
     },
     "action": {
       "description": "Ploson code to execute when condition is met and rule is ready to be fired (reset, cooldown, etc)."
+    },
+    "assets": {
+      "description": "The Assets that this Rule is for.",
+      "type": "object",
+      "link": "Asset"
     }
   }
 }
