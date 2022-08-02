@@ -30,7 +30,6 @@ export const entitySchemas = [
   ruleSchema,
   thingSchema,
   thingTypeSchema,
-  triggerSchema,
 ];
 
 export const associationSchemas = [
