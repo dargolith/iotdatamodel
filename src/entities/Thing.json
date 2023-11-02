@@ -38,6 +38,11 @@
       "type": "object",
       "link": "Procedure"
     },
+    "things": {
+      "description": "The related Things to this Thing",
+      "type": "object",
+      "link": "Thing"
+    },
     "configs": {
       "description": "The Configs of this Thing",
       "type": "object",

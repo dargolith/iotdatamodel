@@ -13,10 +13,11 @@ import hasChannelSchema from './src/associations/HasChannel.json';
 import hasAssetSchema from './src/associations/HasAsset.json';
 import hasConfigSchema from './src/associations/HasConfig.json';
 import hasProcedureSchema from './src/associations/HasProcedure.json';
+import hasThingSchema from './src/associations/HasThing.json';
 import forAssetSchema from './src/associations/ForAsset.json';
 import hasTypeSchema from './src/associations/HasType.json';
 
-export const datamodelVersion = '8.0';
+export const datamodelVersion = '8.1';
 
 export const entitySchemas = [
   assetSchema,
@@ -35,6 +36,7 @@ export const entitySchemas = [
 export const associationSchemas = [
   hasChannelSchema,
   hasAssetSchema,
+  hasThingSchema,
   hasConfigSchema,
   hasProcedureSchema,
   forAssetSchema,

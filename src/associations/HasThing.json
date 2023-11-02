@@ -1,0 +1,23 @@
+{
+  "$id": "https://raw.githubusercontent.com/dargolith/iotdatamodel/master/src/associations/HasThing.json",
+  "title": "HasThing",
+  "description": "An entity linking an Thing to a related Thing",
+  "type": "object",
+  "meta": {
+    "orientdb": {
+      "super": "E",
+      "uniqueIdEdge": true
+    }
+  },
+  "required": ["rid", "id"],
+  "properties": {
+    "rid": {
+      "description": "The record id of the HasThing link",
+      "type": "string"
+    },
+    "id": {
+      "description": "The custom id of the linked Thing",
+      "type": "string"
+    }
+  }
+}
