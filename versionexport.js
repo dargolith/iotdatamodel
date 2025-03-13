@@ -3,7 +3,7 @@ const packjson = await import('./package.json', { with: { type: 'json' } });
 
 const ver = packjson.default.version;
 const x = ver.split('.').slice(0, 2).join('.');
-// console.log(x);
+console.log('VER:', x);
 
 replace({
   regex: "datamodelVersion = '[^']+'",
