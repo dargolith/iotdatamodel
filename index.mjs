@@ -17,7 +17,7 @@ import hasThingSchema from './src/associations/HasThing.json' with { type: 'json
 import forAssetSchema from './src/associations/ForAsset.json' with { type: 'json' };
 import hasTypeSchema from './src/associations/HasType.json' with { type: 'json' };
 
-export const datamodelVersion = '8.1';
+export const datamodelVersion = '9.0';
 
 export const entitySchemas = [
   assetSchema,
