@@ -9,17 +9,14 @@
   "source": "index.mjs",
   "main": "dist/iotdm.cjs",
   "module": "dist/iotdm.esm.js",
-  "umd:main": "dist/iotdm.umd.js",
-  "unpkg": "dist/iotdm.umd.js",
   "exports": {
     "require": "./dist/iotdm.cjs",
-    "import": "./dist/iotdm.modern.js",
-    "umd": "./dist/iotdm.umd.js"
+    "import": "./dist/iotdm.modern.js"
   },
   "scripts": {
     "test": "node test.mjs",
-    "postversion": "node versionexport.js",
-    "build": "microbundle --entry index.mjs --name iotdm --no-sourcemap --generateTypes false",
+    "postversion": "node versionexport.js && git add index.mjs package.json && git commit --amend --no-edit && git tag -f v%npm_package_version%",
+    "build": "vite build",
     "prepublishOnly": "npm run clean && npm run build",
     "clean": "rimraf dist"
   },
@@ -40,8 +37,8 @@
   },
   "homepage": "https://github.com/dargolith/iotdatamodel#readme",
   "devDependencies": {
-    "microbundle": "^0.15.0",
-    "replace": "^1.2.1",
-    "rimraf": "^3.0.2"
+    "replace": "^1.2.2",
+    "rimraf": "^6.0.1",
+    "vite": "^6.2.1"
   }
 }
