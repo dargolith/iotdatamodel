@@ -1,5 +1,5 @@
 const replace = (await import('replace')).default;
-const packjson = await import('./package.json', { assert: { type: 'json' } });
+const packjson = await import('./package.json', { with: { type: 'json' } });
 
 const ver = packjson.default.version;
 const x = ver.split('.').slice(0, 2).join('.');

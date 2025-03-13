@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "node test.mjs",
-    "postversion": "node --experimental-json-modules versionexport.js",
+    "postversion": "node versionexport.js",
     "build": "microbundle --entry index.mjs --name iotdm --no-sourcemap --generateTypes false",
     "prepublishOnly": "npm run clean && npm run build",
     "clean": "rimraf dist"
