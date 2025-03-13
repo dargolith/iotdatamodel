@@ -32,6 +32,16 @@
       "description": "The Configs of this Channel",
       "type": "object",
       "link": "Config"
+    },
+    "historyConf": {
+      "description": "The data history config of the Channel",
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "description": "Indicates whether data history for the channel shall be stored or not",
+          "type": "boolean"
+        }
+      }
     }
   }
 }
