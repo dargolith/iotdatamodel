@@ -8,10 +8,10 @@
   },
   "source": "index.mjs",
   "main": "dist/iotdm.cjs",
-  "module": "dist/iotdm.esm.js",
+  "module": "dist/iotdm.es.js",
   "exports": {
     "require": "./dist/iotdm.cjs",
-    "import": "./dist/iotdm.modern.js"
+    "import": "./dist/iotdm.es.js"
   },
   "scripts": {
     "test": "node test.mjs",
