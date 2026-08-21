@@ -40,7 +40,8 @@
     },
     "cooldown": {
       "description": "A rule will not be fired again unless this number of seconds has passed.",
-      "type": "number"
+      "type": "number",
+      "minimum": 0
     },
     "resetCondition": {
       "description": "Ploson code to check if rule should reset, if it has fired."
