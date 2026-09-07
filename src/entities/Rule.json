@@ -40,7 +40,8 @@
     },
     "cooldown": {
       "description": "A rule will not be fired again unless this number of seconds has passed.",
-      "type": "number"
+      "type": "number",
+      "minimum": 0
     },
     "resetCondition": {
       "description": "Ploson code to check if rule should reset, if it has fired."
@@ -58,6 +59,10 @@
       "description": "The Assets that this Rule is for.",
       "type": "object",
       "link": "Asset"
+    },
+    "assetProjection": {
+      "description": "Which properties of each Asset the Rule needs. The rid is always included. Left out, the whole Asset is bound.",
+      "type": "object"
     }
   }
 }

@@ -1,17 +1,17 @@
 {
   "name": "iotdatamodel",
   "type": "module",
-  "version": "9.0.1",
+  "version": "9.1.0",
   "description": "Generic data model for Internet of Things",
   "engines": {
     "node": ">=14.17.0"
   },
   "source": "index.mjs",
   "main": "dist/iotdm.cjs",
-  "module": "dist/iotdm.es.js",
+  "module": "dist/iotdm.esm.js",
   "exports": {
     "require": "./dist/iotdm.cjs",
-    "import": "./dist/iotdm.es.js"
+    "import": "./dist/iotdm.modern.js"
   },
   "scripts": {
     "test": "node test.mjs",
