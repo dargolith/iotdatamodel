@@ -6,7 +6,7 @@ export default defineConfig({
       entry: 'index.mjs',
       name: 'iotdm',
       formats: ['es', 'cjs'],
-      fileName: (format) => `iotdm.${format}.js`,
+      fileName: (format) => (format === 'es' ? 'iotdm.es.js' : 'iotdm.cjs'),
     },
     rollupOptions: {
       external: [],
