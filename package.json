@@ -39,7 +39,6 @@
   },
   "homepage": "https://github.com/dargolith/iotdatamodel#readme",
   "devDependencies": {
-    "replace": "^1.2.2",
     "rimraf": "^6.0.1",
     "vite": "^6.2.1"
   }
