@@ -20,18 +20,20 @@
       "index": "unique"
     },
     "name": {
-      "description": "The name of the Asset",
+      "description": "The name of the Channel",
       "type": "string"
     },
     "type": {
       "description": "The ChannelType of the Channel",
       "type": ["string", "null"],
-      "link": "ChannelType"
+      "link": "ChannelType",
+      "via": "HasType"
     },
     "configs": {
       "description": "The Configs of this Channel",
       "type": "object",
-      "link": "Config"
+      "link": "Config",
+      "via": "HasConfig"
     },
     "historyConf": {
       "description": "The data history config of the Channel",

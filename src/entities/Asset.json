@@ -26,27 +26,32 @@
     "type": {
       "description": "The AssetType of the Asset",
       "type": ["string", "null"],
-      "link": "AssetType"
+      "link": "AssetType",
+      "via": "HasType"
     },
     "channels": {
       "description": "The Channels of the Asset",
       "type": "object",
-      "link": "Channel"
+      "link": "Channel",
+      "via": "HasChannel"
     },
     "procedures": {
       "description": "The Procedures of the Asset",
       "type": "object",
-      "link": "Procedure"
+      "link": "Procedure",
+      "via": "HasProcedure"
     },
     "assets": {
       "description": "The related Assets to this Asset",
       "type": "object",
-      "link": "Asset"
+      "link": "Asset",
+      "via": "HasAsset"
     },
     "configs": {
       "description": "The Configs of this Asset",
       "type": "object",
-      "link": "Config"
+      "link": "Config",
+      "via": "HasConfig"
     }
   }
 }

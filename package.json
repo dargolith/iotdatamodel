@@ -1,45 +1,51 @@
 {
   "name": "iotdatamodel",
-  "type": "module",
   "version": "9.1.1",
   "description": "Generic data model for Internet of Things",
-  "engines": {
-    "node": ">=14.17.0"
-  },
-  "source": "index.mjs",
-  "main": "./dist/iotdm.cjs",
-  "module": "./dist/iotdm.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/iotdm.es.js",
-      "require": "./dist/iotdm.cjs"
-    }
-  },
-  "scripts": {
-    "test": "node test.mjs",
-    "version": "node versionexport.js && git add index.mjs",
-    "build": "vite build",
-    "prepublishOnly": "npm run clean && npm run build",
-    "clean": "rimraf dist"
-  },
+  "license": "MIT",
+  "author": "Jesper Ahlberg",
+  "homepage": "https://github.com/dargolith/iotdatamodel#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dargolith/iotdatamodel.git"
   },
-  "keywords": [
-    "datamodel",
-    "json",
-    "schema",
-    "iot"
-  ],
-  "author": "Jesper Ahlberg",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dargolith/iotdatamodel/issues"
   },
-  "homepage": "https://github.com/dargolith/iotdatamodel#readme",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.js"
+    },
+    "./entities/*.json": "./src/entities/*.json",
+    "./associations/*.json": "./src/associations/*.json",
+    "./package.json": "./package.json"
+  },
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "files": [
+    "/CHANGELOG.md",
+    "src"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "verify": "npm test",
+    "preversion": "npm run verify",
+    "version": "node versionexport.js && git add src/index.js",
+    "prepublishOnly": "npm run verify"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "datamodel",
+    "iot",
+    "json",
+    "schema"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
   "devDependencies": {
-    "rimraf": "^6.0.1",
-    "vite": "^6.2.1"
+    "ajv": "^8.20.0",
+    "vitest": "^5.1.1"
   }
 }

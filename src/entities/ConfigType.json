@@ -20,7 +20,7 @@
       "index": "unique"
     },
     "name": {
-      "description": "The name of the Asset",
+      "description": "The name of the ConfigType",
       "type": "string"
     }
   }

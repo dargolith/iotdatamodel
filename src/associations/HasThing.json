@@ -1,7 +1,7 @@
 {
   "$id": "https://raw.githubusercontent.com/dargolith/iotdatamodel/master/src/associations/HasThing.json",
   "title": "HasThing",
-  "description": "An entity linking an Thing to a related Thing",
+  "description": "An entity linking a Thing to a related Thing",
   "type": "object",
   "meta": {
     "orientdb": {

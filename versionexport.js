@@ -1,6 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
-const INDEX_URL = new URL('./index.mjs', import.meta.url);
+const INDEX_URL = new URL('./src/index.js', import.meta.url);
 const PACKAGE_URL = new URL('./package.json', import.meta.url);
 const VERSION_PATTERN = /datamodelVersion = '[^']+'/g;
 
@@ -12,7 +12,7 @@ const source = await readFile(INDEX_URL, 'utf8');
 const hasVersionExport = source.search(VERSION_PATTERN) !== -1;
 
 if (!hasVersionExport) {
-  console.error('versionexport: no datamodelVersion export found in index.mjs');
+  console.error('versionexport: no datamodelVersion export found in src/index.js');
   process.exit(1);
 }
 

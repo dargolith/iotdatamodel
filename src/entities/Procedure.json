@@ -26,12 +26,14 @@
     "type": {
       "description": "The ProcedureType of the Procedure",
       "type": ["string", "null"],
-      "link": "ProcedureType"
+      "link": "ProcedureType",
+      "via": "HasType"
     },
     "configs": {
       "description": "The Configs of this Procedure",
       "type": "object",
-      "link": "Config"
+      "link": "Config",
+      "via": "HasConfig"
     }
   }
 }

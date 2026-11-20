@@ -26,7 +26,8 @@
     "type": {
       "description": "The ConfigType of the Config",
       "type": ["string", "null"],
-      "link": "ConfigType"
+      "link": "ConfigType",
+      "via": "HasType"
     }
   }
 }

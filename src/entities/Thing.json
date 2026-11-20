@@ -26,27 +26,32 @@
     "type": {
       "description": "The ThingType of the Thing",
       "type": ["string", "null"],
-      "link": "ThingType"
+      "link": "ThingType",
+      "via": "HasType"
     },
     "channels": {
       "description": "The Channels of the Thing",
       "type": "object",
-      "link": "Channel"
+      "link": "Channel",
+      "via": "HasChannel"
     },
     "procedures": {
       "description": "The Procedures of the Thing",
       "type": "object",
-      "link": "Procedure"
+      "link": "Procedure",
+      "via": "HasProcedure"
     },
     "things": {
       "description": "The related Things to this Thing",
       "type": "object",
-      "link": "Thing"
+      "link": "Thing",
+      "via": "HasThing"
     },
     "configs": {
       "description": "The Configs of this Thing",
       "type": "object",
-      "link": "Config"
+      "link": "Config",
+      "via": "HasConfig"
     }
   }
 }

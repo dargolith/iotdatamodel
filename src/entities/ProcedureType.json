@@ -26,7 +26,8 @@
     "configs": {
       "description": "The Configs of this ProcedureType",
       "type": "object",
-      "link": "Config"
+      "link": "Config",
+      "via": "HasConfig"
     }
   }
 }
